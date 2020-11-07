@@ -3,15 +3,19 @@ body {
 }
 
 body .card {
-  border-radius: 1rem;
+	border-radius: 1rem;
 }
 .rounded-1 {
-  border-radius: 1rem !important;
+	border-radius: 1rem !important;
 }
 .rounded-2 {
-  border-radius: 2rem !important;
+	border-radius: 2rem !important;
 }
 
 .title {
-  font-family: 'Gugi', cursive;
+	font-family: "Gugi", cursive;
+}
+
+a {
+  text-decoration: none !important;
 }

@@ -5,8 +5,8 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-4">
-      <div class="card rounded-1">
+    <div class="col-md-4">
+      <div class="card rounded-1 mb-2">
         <div class="card-body">
           <div class="row justify-content-center">
             <img
@@ -20,6 +20,35 @@
               {{user.username}}#{{user.discriminator}}
             </div>
           </div>
+        </div>
+      </div>
+      <div class="card rounded-1">
+        <div class="card-header font-weight-bold border-0 font-weight-bold">
+          Assignments this week
+        </div>
+        <div class="card-body">
+          {{#if assignments}}
+            assignments show up here
+          {{else}}
+            No assignments coming up
+          {{/if}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card rounded-1">
+        <div class="card-header border-0 font-weight-bold h5">
+          <div class="row justify-content-between mx-1">
+            <div>My Classes</div>
+            <div><a href="#" class="text-danger">+</a></div>
+          </div>
+        </div>
+        <div class="card-body">
+          {{#if classes}}
+            Classes will appear here
+          {{else}}
+          You are not enrolled in any classes yet
+          {{/if}}
         </div>
       </div>
     </div>
