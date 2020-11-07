@@ -52,7 +52,7 @@ passport.use(
 			clientID: process.env.DISCORD_CLIENT_ID,
 			clientSecret: process.env.DISCORD_CLIENT_SECRET,
 			callbackURL: "/auth/discord/callback",
-			scope: ["identify", "email", "guilds", "guilds.join"],
+			scope: ["identify", "email", "guilds.join"],
 		},
 		function (accessToken, refreshToken, profile, cb) {
 			console.log(
@@ -66,7 +66,7 @@ passport.use(
 					discriminator: profile.discriminator,
 					email: profile.email,
 					accessToken: profile.accessToken,
-					guilds: profile.guilds,
+					avatar: profile.avatar,
 				},
 				function (err, user) {
 					return cb(err, user);

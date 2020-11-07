@@ -11,3 +11,7 @@ body .card {
 .rounded-2 {
   border-radius: 2rem !important;
 }
+
+.title {
+  font-family: 'Gugi', cursive;
+}

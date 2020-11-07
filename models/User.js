@@ -7,9 +7,9 @@ var UserSchema = new Schema({
 	discordId: String,
 	username: { type: String, unique: false },
 	discriminator: { type: String, unique: false },
-    email: { type: String, unique: false },
-    accessToken: String,
-    guilds: Array
+	email: { type: String, unique: false },
+	accessToken: String,
+	avatar: String,
 });
 
 UserSchema.plugin(findOrCreate);

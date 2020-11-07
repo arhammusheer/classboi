@@ -5,9 +5,7 @@ const passport = require("passport");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  if (req.user) {
-    return res.redirect("/u")
-  }
+  if (req.user) return res.redirect("/u");
 	res.render("public/index", { title: config.name });
 });
 
@@ -22,5 +20,10 @@ router.get(
 		res.redirect("/u"); // Successful auth from Discord
 	},
 );
+
+router.get("/logout", (req, res, next) => {
+	if (req.user) req.logout();
+	return res.redirect("/");
+});
 
 module.exports = router;

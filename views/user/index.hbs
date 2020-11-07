@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row justify-content-center m-4">
+    <div class="h3 font-weight-bold title text-danger">
+      {{title}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="card rounded-1">
+        <div class="card-body">
+          <div class="row justify-content-center">
+            <img
+              src="https://cdn.discordapp.com/avatars/{{user.discordId}}/{{user.avatar}}"
+              alt="discord-profile"
+              class="rounded-circle"
+            />
+          </div>
+          <div class="row justify-content-center mt-3">
+            <div class="h5 font-weight-bold">
+              {{user.username}}#{{user.discriminator}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
