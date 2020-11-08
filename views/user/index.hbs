@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row justify-content-center m-4">
-    <div class="h3 font-weight-bold title text-danger">
+    <a class="h3 font-weight-bold title text-danger" href="/">
       {{title}}
-    </div>
+    </a>
   </div>
   <div class="row">
     <div class="col-md-4">
@@ -33,15 +33,6 @@
             No assignments coming up
           {{/if}}
         </div>
-        Download/Retrieve Important Information
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Select One
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Assignments</a>
-            <a class="dropdown-item" href="#">Sylabus</a>
-            <a class="dropdown-item" href="#">Grades</a>
-          </div>
       </div>
     </div>
     <div class="col-md-8">
@@ -53,8 +44,12 @@
           </div>
         </div>
         <div class="card-body">
-          {{#if classes}}
-            Classes will appear here
+          {{#if user.classes}}
+            <ul class="list-group">
+              {{#each user.classes}}
+              <a class="list-group-item" href="/u/class/{{this.classId}}"><div class="d-flex justify-content-between"><div class="h5 text-danger">{{this.name}}</div>{{this.classId}}</div></a>
+              {{/each}}
+            </ul>
           {{else}}
           You are not enrolled in any classes yet
           {{/if}}

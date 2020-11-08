@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="row justify-content-center m-4">
+    <a class="h3 font-weight-bold title text-danger" href="/">
+      {{title}}
+    </a>
+  </div>
+  <div class="row justify-content-center">
+    <div class="card">
+      <div class="card-body">
+        <form method="POST" action="/u/create">
+          <div class="form-group">
+            <label for="name">
+              Class name
+            </label>
+            <input
+              id="name"
+              name="name"
+              placeholder="Class name"
+              type="text"
+              required="required"
+              class="form-control rounded-1"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">
+              Description
+            </label>
+            <textarea
+              id="description"
+              name="description"
+              cols="40"
+              rows="4"
+              aria-describedby="descriptionHelpBlock"
+              class="form-control rounded-1"
+            ></textarea>
+            <span id="descriptionHelpBlock" class="form-text text-muted">
+              (optional)
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="syllabus">
+              Syllabus Link
+            </label>
+            <input
+              id="syllabus"
+              name="syllabus"
+              placeholder="Syllabus Link"
+              type="url"
+              class="form-control rounded-1"
+            />
+            <span id="linkHelpBlock" class="form-text text-muted">
+              (optional)
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="link">
+              Meeting Link
+            </label>
+            <input
+              id="link"
+              name="link"
+              placeholder="Meeting Link Ex. Zoom, Google Meet"
+              type="url"
+              aria-describedby="linkHelpBlock"
+              class="form-control rounded-1"
+            />
+            <span id="linkHelpBlock" class="form-text text-muted">
+              (optional)
+            </span>
+          </div>
+          <div class="form-group">
+            <button
+              name="submit"
+              type="submit"
+              class="btn btn-danger rounded-1"
+            >
+              Create
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,6 +4,7 @@ var Schema = mongoose.Schema;
 var SchemaTypes = mongoose.Schema.Types;
 
 var ClassSchema = new Schema({
+    name: String,
     description: String,
     syllabus: String,
     meetings: Array,
